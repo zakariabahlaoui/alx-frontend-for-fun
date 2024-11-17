@@ -1,0 +1,88 @@
+/* Hide the default checkbox */
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+/* Style the toggle label */
+label {
+    cursor: pointer;
+    width: 180px;
+    height: 60px;
+    background: rgb(224, 224, 224);
+    display: block;
+    border-radius: 30px;
+    border: 2px solid #a1a1a1;
+    position: relative;
+    margin: 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Style the toggle-inner part */
+.toggle-inner {
+    position: absolute;
+    top: 50%;
+    left: 25px; /* Adjust as needed for positioning */
+    transform: translate(10%);
+    font-size: 14px;
+    color: white;
+    pointer-events: none;
+    transition: left 0.3s ease-in-out;
+}
+
+/* inner toggle when unchecked */
+.toggle-inner:before {
+    content: 'No';
+    position: absolute;
+    color: #6a6a6a;
+    left: 80px;
+    font-size: 40px;
+    top: -23px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* inner toggle when checked */
+.toggle-inner:after {
+    content: 'Yes';
+    position: absolute;
+    right: 40px;
+    font-size: 40px;
+    top: -23px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Style the toggle switch circle */
+.toggle-switch {
+    position: absolute;
+    top: -15px;
+    left: -21px; /* position of circle for both checked and unchecked */
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    border: 2px solid #5c5b5b;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Checked state styles */
+input:checked + label {
+    background: #c64c4c;
+}
+
+input:checked + label .toggle-inner {
+    left: calc(100% - 70px); /* Adjust as needed for positioning */
+}
+
+input:checked + label .toggle-inner:before {
+    opacity: 0;
+}
+
+input:checked + label .toggle-inner:after {
+    opacity: 1;
+}
+
+input:checked + label .toggle-switch {
+    transform: translateX(110px); /* Adjust as needed to move the switch circle to the right */
+}
