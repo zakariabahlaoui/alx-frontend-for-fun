@@ -1,0 +1,58 @@
+/* 0-styles.css */
+
+/* Remove default padding and list style */
+ul {
+    padding: 0;
+    margin-left: 50px;
+    list-style-type: none;
+}
+
+/* Display list items inline */
+li {
+    display: inline-block;
+    margin-right: 20px; /* Add margin between list items */
+    /* Target the text inside the list items */
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    vertical-align: middle;
+    border: 1px solid #908f8f;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #edededba;
+}
+
+/* margin between the text and the icon */
+li span.icon + span {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* Icon styles */
+.icon {
+    display: inline-block;
+    width: 105px;
+    height: 145px; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Specific icon classes with background images */
+.i-html {
+    background-image: url('/html.png');
+    display: flex;
+}
+
+.i-css {
+    background-image: url('/css.png');
+    display: flex;
+}
+
+.i-js {
+    background-image: url('/js.png');
+    display: flex;
+}
